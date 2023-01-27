@@ -1,0 +1,337 @@
+/* styles.css 
+   Project: 
+   Author: 
+   Date: 
+	
+   Helpful links: 
+   	Web colors: 
+   		https://en.wikipedia.org/wiki/Web_colors#X11_color_names
+	Color picker tool:
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
+		http://colorpicker.com
+
+*/
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: rgba(0,0,0,0);
+   font-family: 'Roboto Condensed', sans-serif;
+   /*overflow: hidden;*/
+
+}
+
+input {
+   width: 300px;
+   border-radius: 3px;
+   border: 0.5px solid lightgrey;
+   height: 30px;
+}
+
+
+.title {
+   text-align: left;
+   /*padding: 20px;*/
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+   .title h1 {
+      border-bottom: 2px solid #0000FF;
+      font-weight: bold;
+      font-size: 22.4px;
+   }
+
+   .title p {
+      color: rgb(102, 102, 102);
+   }
+
+.search {
+   margin: 10px;
+}
+
+
+.tablediv {
+   width: 100%;
+   /*height: 545px;*/
+   overflow: scroll;
+   position: relative;
+   /*background-color: lightslategray;*/
+}
+
+.outertable {
+   border-collapse: collapse;
+   width: 100%;
+   font-size: 14px;
+   text-align: left;
+
+
+}
+
+.header {
+   background-color: #0000FF;
+   text-align: left;
+   padding: 12px;
+   color: white;
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+   .header th{
+      text-align: left;
+      padding: 10px;
+
+   }
+
+.myTable th, .myTable td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 0.1px solid silver;
+}
+
+.myTable tr {
+  /*background-color: snow;*/
+  cursor: pointer;
+}
+
+.myTable tr.header, .myTable tr:hover {
+  background-color: rgba(53, 131, 255,0.1);
+}
+
+
+/*----------------------- ARROWS ------------------------------*/
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-bottom: 7px solid silver;
+  margin-bottom: 3px;
+}
+
+/*.prop .arrow-up {
+   border-bottom: 7px solid blue;
+}*/
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-top: 7px solid silver;
+}
+
+.arrows {
+   float: right;
+}
+
+
+/*__________________MODAL________________*/
+
+.inspections {
+   position: fixed;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   padding: 20px;
+   display: none;
+}
+
+   .inspections h3 {
+      /*background-color: rgba(178,34,34,0.1);*/
+      border-bottom: 2px solid #0000FF;
+
+      padding: 5px;
+   }
+
+   .inspections h4 {
+      padding-left: 30px;
+   }
+
+   .inspections h5 {
+      background-color: rgba(53, 131, 255,0.1);
+      padding: 5px;
+      /*padding-left: 50px;*/
+      text-align: left;
+      font-size: 15px;
+   }
+
+   .inspections p {
+      padding-left: 70px;
+   }
+
+      .back {
+         position: fixed;
+         top: 0px;
+         left: 0;
+         display: none;
+         padding: 10px;
+         width: 45px;
+         cursor: pointer;
+      }
+
+         .back img {
+            width: 100%;
+         }
+
+   .source {
+      color: rgb(102, 102, 102);
+      font-size: 13px;
+   }
+/* --------------------------------------PAGES!--------------------------------- */       
+
+.prev {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid silver;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin-bottom: 3px;
+  margin-right: 10px;
+}
+
+.left {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid silver;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin-bottom: 3px;
+  margin-left: -9px;
+}
+
+.next {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid silver;
+  border-right: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+.right {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid silver;
+  border-right: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin-bottom: 3px;
+  margin-right: -9px;
+}
+
+.pagesize {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+/*
+--------------------------------------MEDIA QUERIES--------------------------------------*/
+
+ @media only screen and (max-width: 599px) {
+
+/*      .inspections {
+         top: 236px;
+      }
+
+      .back {
+         top: 236px;
+      }*/
+
+
+
+ }  
+
+
+  @media only screen and (max-width: 404px) {
+
+      p {
+         font-size: 12px;
+      }
+
+      th {
+         font-size: 11px;
+      }
+
+      td {
+         font-size: 11px;
+      }
+
+      input {
+         width: 90%;
+      }
+
+/*      .inspections {
+         top: 224px;
+      }
+
+      .back {
+         top: 224px;
+      }*/
+
+ }    
+
+
+   @media only screen and (max-width: 336px) {
+
+/*      .inspections {
+         top: 239px;
+      }
+
+      .back {
+         top: 239px;
+      }*/
+
+ } 
+
+
+    @media only screen and (max-width: 279px) {
+
+/*      .inspections {
+         top: 254px;
+      }
+
+      .back {
+         top: 254px;
+      }*/
+
+ } 
+
+
+    @media only screen and (max-width: 234px) {
+
+/*      .title h1 {
+         font-size: 28px;
+      }
+
+      .inspections {
+         top: 254px;
+      }
+
+      .back {
+         top: 254px;
+      }*/
+
+ } 
+
+
+
+
+
+
+

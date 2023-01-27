@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chicago building violations</title>
+
+	<!-- viewport for responsive -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!-- CSS stylesheets -->	
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/jqueryui.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.tablesorter.pager.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+  	<div class="outercontainer">
+
+    <div class="title">
+    	<h1> Search the building violation history in Chicago</h1>
+    	<p>Type an address into the search bar to see how many violation it had between TKTKTK. Click on any address to see a more complete look at its violation history.</p>
+    </div>
+
+   <input class="search" type="search" data-column="all" placeholder="Search for a name or city...">
+
+
+    
+    <div class="tablediv">
+	    <table class='outertable'>
+	    	<thead>
+		  		<tr class="header">
+
+				    <th>Address 
+				    	<div class="prop arrows">
+					    	<div class="arrow-up"></div>
+					    	<div class="arrow-down"></div> 
+					    </div>
+				    </th>
+				    <th>Number of violations 
+				    	<div class="arrows">
+					    	<div class="arrow-up"></div>
+					    	<div class="arrow-down"></div> 
+					    </div>
+				    </th>
+
+				   
+				</tr>
+			</thead>
+
+			<tbody class="myTable">
+			</tbody>
+		</table>
+
+		
+
+
+		<div class="inspections">
+			<h3 class = "propname">Address:</h3>
+				<h4 class = "address">Violation Date:</h4>
+				<h4 class = "housingtype">Inspection Status:</h4>
+
+				<div class="violationsdata"></div>
+
+			<div class='back'>		
+				<img src="img/exit.svg">	
+			</div>		
+
+		</div>
+
+	</div> <!-- END TABLE DIV -->
+
+	<div id="pager" class="pager">
+
+		<form>
+			
+			<div class="arrows last">
+				<div class="arrows right"></div>
+				<div class="arrows right"></div>
+			</div>
+
+			<div class="arrows next"></div>
+			
+
+			<span class="pagedisplay" data-pager-output-filtered="{startRow:input} &ndash; {endRow} / {filteredRows} of {totalRows} total rows"></span>
+
+			<div class="arrows prev"></div>
+
+			<div class="arrows first">
+				<div class="arrows left"></div>
+				<div class="arrows left"></div>
+			</div>
+
+		</form>
+
+	</div>
+
+	<div class="source">
+		<p>Source: XYZ</p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jqueryui.js"></script>
+	<script src="data/summary_data.json"></script>
+	<script src="data/table-data.json"></script>
+	<script src="js/jquery.tablesorter.js"></script>
+	<script src="js/jquery.tablesorter.widgets.js"></script>
+	<script src="js/widget-pager.js"></script>
+	<script src="js/script.js"></script>
+  </body>
+</html>
+
+
+<!-- Code by Grace Manthey -->
+
